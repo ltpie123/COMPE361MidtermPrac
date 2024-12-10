@@ -2,11 +2,12 @@
 #    numbers. If the user enters a number that has already been entered before,
 #    the application should print all the numbers entered previously and term.
 
-in = int(input())
+num_set = set()
 
-arr = set()
+usr_in = int(input())
 
-while not in in arr:
-    arr.add(in)
-    in =int(input())
-print(arr)
+while not usr_in in num_set:
+    num_set.add(usr_in)
+    usr_in = int(input())
+
+print(num_set)
